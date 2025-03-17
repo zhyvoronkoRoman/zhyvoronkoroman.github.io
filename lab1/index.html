@@ -3,75 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оренда автомобілів</title>
+    <title>Оренда Автомобілів у Зимній Воді</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#cars">Автомобілі</a></li>
-                <li><a href="#bookings">Мої бронювання</a></li>
-                <li><a href="#about">Про нас</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="cars">
-            <h2>Доступні автомобілі</h2>
-            <div class="cars-grid">
-                <div class="car">
-                    <img src="corolla.jpg" alt="Автомобіль 1">
-                    <h3>Toyota Corolla</h3>
-                    <p>Ціна: $40/доба</p>
-                    <p>Трансмісія: Автомат</p>
-                    <p>Доступно: 5</p>
-	  	    <button>Забронювати</button>
-                </div>
-                <div class="car">
-                    <img src="bmw.jpg" alt="Автомобіль 2">
-                    <h3>BMW X5</h3>
-                    <p>Ціна: $90/доба</p>
-                    <p>Трансмісія: Автомат</p>
-                    <p>Доступно: 2</p>
-		    <button>Забронювати</button>
-                </div>
-                <div class="car">
-                    <img src="focus.jpg" alt="Автомобіль 3">
-                    <h3>Ford Focus</h3>
-                    <p>Ціна: $35/доба</p>
-                    <p>Трансмісія: Механіка</p>
-                    <p>Доступно: 4</p>
-		    <button>Забронювати</button>
-                </div>
+    <nav>
+        <a href="index.html" class="brand">
+            <h1>Черемшина<b class = "accent"></b></h1>
+        </a>
+        <div class="menu">
+            <div class = "btn">
+                <i class="fas fa-times close-btn"></i>
             </div>
-  		</div>
-                <div class="car">
-                    <img src="kiasoul.jpg" alt="Автомобіль 3">
-                    <h3>Kia Soul</h4>
-                    <p>Ціна: $35/доба</p>
-                    <p>Трансмісія: Автомат</p>
-                    <p>Доступно: 5</p>
-		    <button>Забронювати</button>
+            <a href="index.html">Додому </a>
+            <a href="collection.html">Машини </a>
+            <a href="index.html#about"> Про Нас</a>
+        </div>
+        <button class="btn-2">
+            Розпочати 
+        </button>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </nav>
+        <div class="main-page">
+            <h1>
+                Легко і швидко взяти машину на прокат у Зимній Воді!
+            </h1>
+            <p>
+              Ми пропонуємо великий вибір машин під ваші потреби,
+              незалежно відпочинок з сім'єю це чи бізнес-подорож.  
+            </p>
+            <button class="btn-2 btn-main">
+                Розпочати 
+            </button>
+
+    </div>
+    <section class="collection">
+        <h1>Наші найновіші машини</h1>
+        <div class="collection-container">
+            <!-- car 1 -->
+            <div class="collection-car-item">
+                <img src="img/corolla.jpg" alt="img">
+                <div class="car-info-container">
+                    <div class="car-info">
+                        <div class="car-price">
+                            <h5>Ціна:</h5>
+                            <h6>$50/день</h6>
+                        </div>
+                        <div class="car-transmission">
+                            <h5>Трансмісія:</h5>
+                            <h6>Механіка</h6>
+                        </div>
+                        <div class="number-of-car">
+                            <h5>Кількість машин:</h5>
+                            <h6>4</h6>
+                        </div>
+                    </div>
                 </div>
+                <h2>Toyota Corola</h2>
+                <button class="btn-2 btn-car">
+                    <p>Забронювати</p>
+                    <i class ="fa-solid fa-phone"></i>
+                </button>
             </div>
-        </section>
-        
-        <section id="bookings">
-            <h2>Мої бронювання</h2>
-            <p>Тут будуть відображатися ваші підтверджені бронювання.</p>
-        </section>
-        
-        <section id="about">
-            <h2>Про нас</h2>
-            <p>Ми - компанія, що пропонує найкращий вибір автомобілів для оренди.</p>
-            <p>Контакти: +380 148 822 813, email: rent@cars.com</p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 Оренда автомобілів. Всі права захищені.</p>
-    </footer>
+            <!-- car 2 -->
+            <div class="collection-car-item">
+                <img src="img/bmw.jpg" alt="img">
+                <div class="car-info-container">
+                    <div class="car-info">
+                        <div class="car-price">
+                            <h5>Ціна:</h5>
+                            <h6>$80/день</h6>
+                        </div>
+                        <div class="car-transmission">
+                            <h5>Трансмісія:</h5>
+                            <h6>Автомат</h6>
+                        </div>
+                        <div class="number-of-car">
+                            <h5>Кількість машин:</h5>
+                            <h6>6</h6>
+                        </div>
+                    </div>
+                </div>
+                <h2>BMW X5</h2>
+                <button class="btn-2 btn-car">
+                    <p>Забронювати</p>
+                    <i class ="fa-solid fa-phone"></i>
+                </button>
+            </div>
+            <!-- car 3 -->
+            <div class="collection-car-item">
+                <img src="img/focus.jpg" alt="img">
+                <div class="car-info-container">
+                    <div class="car-info">
+                        <div class="car-price">
+                            <h5>Ціна:</h5>
+                            <h6>$40/день</h6>
+                        </div>
+                        <div class="car-transmission">
+                            <h5>Трансмісія:</h5>
+                            <h6>Механіка</h6>
+                        </div>
+                        <div class="number-of-car">
+                            <h5>Кількість машин:</h5>
+                            <h6>2</h6>
+                        </div>
+                    </div>
+                </div>
+                <h2>Ford Focus</h2>
+                <button class="btn-2 btn-car">
+                    <p>Забронювати</p>
+                    <i class ="fa-solid fa-phone"></i>
+                </button>
+            </div>
+            <!-- car 4 -->
+            <div class="collection-car-item">
+                <img src="img/kiasoul.jpg" alt="img">
+                <div class="car-info-container">
+                    <div class="car-info">
+                        <div class="car-price">
+                            <h5>Ціна:</h5>
+                            <h6>$35/день</h6>
+                        </div>
+                        <div class="car-transmission">
+                            <h5>Трансмісія:</h5>
+                            <h6>Автомат</h6>
+                        </div>
+                        <div class="number-of-car">
+                            <h5>Кількість машин:</h5>
+                            <h6>1</h6>
+                        </div>
+                    </div>
+                </div>
+                <h2>Kia Soul</h2>
+                <button class="btn-2 btn-car">
+                    <p>Забронювати</p>
+                    <i class ="fa-solid fa-phone"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+<section class="about" id = "about">
+    <div class="heading">
+        <span>Хто ми та де ми?</span>
+    </div>       
+    <div class="about-container">
+        <div class="about-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.4729897160023!2d23.91562501589634!3d49.80640097939332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae7e8a2a6e4b5%3A0x4935e4b8eb2e22a1!2sZymna%20Voda%2C%20Lviv%20Oblast!5e0!3m2!1sen!2sua!4v1645788676543!5m2!1sen!2sua" 
+                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="about-text">
+            <span>Про нас</span>
+            <p>Ласкаво просимо до "Черемшина" – надійного сервісу з оренди автомобілів у с Зимна Вода! Ми пропонуємо зручний та швидкий прокат авто для мешканців і гостей регіону, забезпечуючи комфорт та безпеку на дорозі.</p>
+
+                <p>Чому обирають нас?</p>
+                <p>✔ Широкий вибір авто – від економ-класу до бізнес-седанів і позашляховиків.</p>
+                <p>✔ Гнучкі умови оренди – погодинна, добова, довгострокова оренда.</p>
+                <p>✔ Прозорі ціни – без прихованих платежів та комісій.</p>
+                <p>✔ Зручна локація – швидке оформлення та видача авто у Зимній Воді.</p>
+                <p>✔ Підтримка 24/7 – технічна допомога та консультації в будь-який час.</p>
+                
+                <p>Незалежно від того, чи ви приїхали у відрядження, на відпочинок або вам просто потрібне авто на певний час – "Зимна Вода" допоможе вам знайти ідеальний варіант!</p>        
+                <p>З "Черемшина" оренда авто – це легко, швидко та доступно! 🚘✨</p>
+        </div>
+    </div>
+</section>
+<footer>
+   
+    <div class="contacts">
+        <p>📍 Адреса: с. Зимна Вода, вул. Центральна, 15</p>
+        <p>     📞 Телефон: +380 67 123 45 67</p>
+        <p>     📧 Email: info@zimnavoda.com</p>  
+    </div>
+    <p>&copy; 2025 Оренда автомобілів. Всі права захищені.</p>
+</footer>
 </body>
 </html>

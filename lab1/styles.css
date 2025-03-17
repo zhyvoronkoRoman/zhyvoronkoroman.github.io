@@ -1,94 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+:root {
+    --accent: #5d50fa;
+    --black: #131313;
+    --gray: #f9f9f9;
+    --footer-bg: #222;
+    --footer-text: #ccc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 10;
-    padding: 0;
-    background: #f598ec;
-}
-
-header {
-    background: #764771;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
+    min-height: 100vh;
+    background-image: url('img/back.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+/* Навігація */
+nav{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content:space-between ;
+    align-items:center;
+    color: #131313;
+    background-color: #f8f29a;
+    padding: 30px 50px;
+    transition: all 0.1s ease-out;
+    filter:drop-shadow(5px 5px 10px transparent) ;
 }
 
-nav ul li a {
-    color: white;
+
+
+nav .brand {
     text-decoration: none;
+    color: var(--black);
+}
+
+nav .brand h1 {
+    font-size: 32px;
     font-weight: bold;
 }
-nav ul li a:hover {
-    background: #932588;
-}
 
-main {
-    padding: 20px;
-}
-
-.car-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.menu {
+    display: flex;
+    align-items: center;
     gap: 20px;
 }
 
-.car {
-    background: #ffccfa;
-    padding: 15px;
+.menu a {
+    display:inline-block;
+    position: relative;
+    color: #131313;
+    text-decoration: none;
+    margin: 0 40px;
+    font-size: 32px;
+    font-weight: 500;
+
+}
+
+.menu a::after{
+    color: red;
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    height:0.1em;
+    bottom: 0;
+    left: 0;
+    background: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
-.car img {
-    width: 45%; 
-    height: auto;
-    cursor: pointer; /* Додає ефект натискання */
-    transition: transform 0.3s;
+.menu a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
-.car img:hover {
-    transform: scale(1.05); /* Легке збільшення при наведенні */
+.btn{
+    color: #f9f9f9;
+font-size: 25px;
+cursor: pointer;
+display: none;
 }
 
 
-
-button {
-    background: #E335D2;
+.btn-2 {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: red;
+    border: 1px solid #770000;
+    border-radius: 5px;
     color: white;
-    padding: 10px;
-    border: none;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-button:hover {
-    background: #932588;
+.btn-2:hover {
+    background-color: #770000;
 }
 
-footer {
-    background: #764771;
-    color: white;
+/* Головна сторінка */
+.main-page {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    color: white;
+    padding: 50px;
+}
+
+.main-page h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main-page p {
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.collection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.collection h1{
+    font-size: 64px;
+    font-weight: bold;
+    color: white;
+}
+
+.collection-container{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.collection-car-item{
+    width: 200px;
+    height: 500px;
+    image-resolution: 200px;
+    background-color: #f8f29a;
+    display: flex;
+    flex-direction: column;
+    border-radius: 32px;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.15));
+    transition: all 0.3 ease-out;
+    color: #000000;
+    
+}
+
+
+.collection-car-item:hover{
+
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.15));
+}
+.collection-car-item img{
+    height: 150px;
+    border-radius: 32px;
+}
+
+.car-info, .car-price, .car-transmission, .number-of-car{
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.collection-car-item h2{
+    text-align: center;
+}
+.car-price h5{
+    gap: 4px;
+    align-items: center;
+}
+.car-price h6{
+    gap: 4px;
+    align-items: center;
+}
+
+.car-transmission h5{
+    gap: 4px;
+    align-items: center;
+}
+.car-transmission h6{
+    gap: 4px;
+    align-items: center;
+}
+
+.number-of-car h5{
+    gap: 4px;
+    align-items: center;
+}
+.number-of-car h6{
+    gap: 4px;
+    align-items: center;
+}
+
+.car-info-container h2{
+    font-size: 32px;
+    margin-bottom: 33px;
+    margin-top: 5px;
+}
+
+.btn-car{
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 172px;
+    height: 50px;
+    font-size: 16px;
+}
+
+.btn-car i{
+    font-size: 16px;
+}
+
+.btn-car:hover{
+    gap:8px;
+}
+
+.car-info-container{
+    width: 50px;
+    padding:  20px 30px 30px 30px;
+}
+
+.heading{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+    color: white;
+    
+}
+
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2,1frn);
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-map iframe{
+    text-align: center;
+    width: 100%;
+    height: 250px;
+}
+
+.about-text span{
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 48px;
+}
+
+.about-text p{
+    font-weight: 500;
+    margin: 0,5rem 0 1.4rem;
+    color: #fcfcfc;
+}
+.footer contacts{
+    text-align: left;
+}
+footer {
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 40px 20px;
+    margin-top: 50px;
 }
 
 /* 📱 Адаптивний дизайн */
-@media (max-width: 768px) {
-    nav ul {
+@media (max-width: 767px) and (min-width: 0px) {
+    nav {
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+    nav .btn{
+        display: block;
+        color: #770000;
+        font-size: 24px;
     }
 
     .car-grid {
