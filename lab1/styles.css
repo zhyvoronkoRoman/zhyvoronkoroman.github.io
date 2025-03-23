@@ -45,8 +45,6 @@ nav{
     filter:drop-shadow(5px 5px 10px transparent) ;
 }
 
-
-
 nav .brand {
     text-decoration: none;
     color: var(--black);
@@ -58,9 +56,10 @@ nav .brand h1 {
 }
 
 .menu {
+    
     display: flex;
     align-items: center;
-    gap: 20px;
+
 }
 
 .menu a {
@@ -172,7 +171,6 @@ display: none;
     color: #000000;
     
 }
-
 
 .collection-car-item:hover{
 
@@ -297,8 +295,13 @@ footer {
     margin-top: 50px;
 }
 
-/* 📱 Адаптивний дизайн */
 @media (max-width: 767px) and (min-width: 0px) {
+    .main-page {
+        margin-top: 20em; 
+    }
+    .menu{
+        flex-direction: column;
+    }
     nav {
         display: flex;
         flex-direction: column;
