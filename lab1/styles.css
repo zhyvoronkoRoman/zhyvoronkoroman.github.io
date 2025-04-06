@@ -19,11 +19,6 @@ html {
 
 body {
     min-height: 100vh;
-    background-image: url('img/back.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     margin: 0;
     padding: 0;
 }
@@ -39,10 +34,10 @@ nav{
     justify-content:space-between ;
     align-items:center;
     color: #131313;
-    background-color: #f8f29a;
+    background-color: grey;
     padding: 30px 50px;
     transition: all 0.1s ease-out;
-    filter:drop-shadow(5px 5px 10px transparent) ;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.15)); ;
 }
 
 nav .brand {
@@ -74,7 +69,7 @@ nav .brand h1 {
 }
 
 .menu a::after{
-    color: red;
+    color: var(--accent);
     content: "";
     position: absolute;
     width: 100%;
@@ -95,48 +90,65 @@ nav .brand h1 {
 
 .btn{
     color: #f9f9f9;
-font-size: 25px;
-cursor: pointer;
-display: none;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
 }
 
 
 .btn-2 {
+    width: 200px;
     margin-top: 15px;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: red;
-    border: 1px solid #770000;
+    background-color: var(--accent);
+    border: 1px solid var(--black);
     border-radius: 5px;
     color: white;
     cursor: pointer;
 }
 
 .btn-2:hover {
-    background-color: #770000;
+    background-color: black;
 }
-
+/* Навігація кінець */
 /* Головна сторінка */
 .main-page {
-    margin-top: 100px;
+    margin-top: 200px;
+    display: flex;
+    padding: 0px 50px;
+    justify-content: center;
+    color: black;
+    overflow: hidden;
+}
+.main-headlines{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 50px;
+    gap: 18px;
+    width: 652px;
+}
+.main-headlines h1 {
+    font-size: 64px;
+    font-weight: bold;
 }
 
-.main-page h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.main-headlines p {
+    font-size: 32px;
 }
 
-.main-page p {
-    font-size: 18px;
-    max-width: 600px;
+.btn-main{
+    width: 276px;
+    height: 62px;
+    font-size: 24px;
 }
 
+.main-page-image{
+    max-width: 70%;
+    height: auto;
+    justify-content: right;
+}
+/* Головна сторінка кінець */
+/* Машини*/
 .collection{
     display: flex;
     flex-direction: column;
@@ -147,7 +159,7 @@ display: none;
 .collection h1{
     font-size: 64px;
     font-weight: bold;
-    color: white;
+    color: black;
 }
 
 .collection-container{
@@ -159,31 +171,41 @@ display: none;
 }
 
 .collection-car-item{
-    width: 200px;
+    /*width: flex;
     height: 500px;
     image-resolution: 200px;
-    background-color: #f8f29a;
+    background-color:white;
     display: flex;
     flex-direction: column;
     border-radius: 32px;
-    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.15));
     transition: all 0.3 ease-out;
-    color: #000000;
-    
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.15));
+    color: #000000;*/
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 450px;
+    padding: .5rem .5rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    margin: 0 auto;
+    transition: all 0.3 ease-out;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.15));
 }
 
 .collection-car-item:hover{
-
-    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.15));
+    box-shadow: 0 12px 16px var(--black);
 }
 .collection-car-item img{
-    height: 150px;
+    align-self: center;
+    height: 300px;
+    width: 450px;
     border-radius: 32px;
 }
 
 .car-info, .car-price, .car-transmission, .number-of-car{
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     
 }
 .collection-car-item h2{
@@ -216,6 +238,12 @@ display: none;
     align-items: center;
 }
 
+.car-info-container{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 33px;
+    margin-top: 5px;
+}
 .car-info-container h2{
     font-size: 32px;
     margin-bottom: 33px;
@@ -223,14 +251,15 @@ display: none;
 }
 
 .btn-car{
+    align-self: center;
     margin-left: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     border-radius: 5px;
-    width: 172px;
-    height: 50px;
+    width: 190px;
+    height: 60px;
     font-size: 16px;
 }
 
@@ -246,12 +275,16 @@ display: none;
     width: 50px;
     padding:  20px 30px 30px 30px;
 }
-
+.collection h1{
+    margin-top: 40px;
+}
+/* Машини кінець*/
+/*Про нас*/
 .heading{
     text-align: center;
     font-size: 48px;
     font-weight: 500;
-    color: white;
+    color: black;
     
 }
 
@@ -261,43 +294,47 @@ display: none;
     margin-top: 2rem;
     align-items: center;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 5rem;
 }
 
 .about-map iframe{
     text-align: center;
     width: 100%;
-    height: 250px;
+    height: 500px;
 }
 
 .about-text span{
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: black;
     text-transform: uppercase;
     font-size: 48px;
 }
 
 .about-text p{
     font-weight: 500;
+    font-size: 24px;
     margin: 0,5rem 0 1.4rem;
-    color: #fcfcfc;
+    color: black;
 }
-.footer contacts{
-    text-align: left;
-}
+/*Про нас кінець*/
 footer {
     justify-items: center;
     width: 100%;
     height: 100%;
+    font-size: 24px;
     background-color: var(--footer-bg);
     color: var(--footer-text);
     padding: 40px 20px;
     margin-top: 50px;
 }
 
-@media (max-width: 767px) and (min-width: 0px) {
+@media (max-width: 768px) and (min-width: 0px) {
     .main-page {
-        margin-top: 20em; 
+        margin-top: 20em;
+        flex-direction: column;        
+    }
+    .main-page-image{
+        width: 100%;
     }
     .menu{
         flex-direction: column;
@@ -309,8 +346,12 @@ footer {
     }
     nav .btn{
         display: block;
-        color: #770000;
+        color: black;
         font-size: 24px;
+    }
+
+    .collection h1{
+        margin-top: 320px;
     }
 
     .car-grid {
