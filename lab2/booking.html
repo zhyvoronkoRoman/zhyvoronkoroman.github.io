@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="scripts.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-refferrer"
+    />
+    <title>Оренда Автомобілів у Зимній Воді</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="brand">
+            <h1>Черемшина<b class="accent"></b></h1>
+        </a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="collection.html">Машини </a>
+            <a href="index.html#about"> Про Нас</a>
+            <a href="yourbooks.html">Ваші бронювання </a>
+        </div>
+        <button class="btn-2" onclick="window.location.href='booking.html'">
+            Розпочати 
+        </button>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </nav>
+<section class="contact">
+    <h1>"Черемшина" - керуй мрією!</h1>
+    <p>
+        Є запитання або потрібна допомога? Наша команда допоможе
+        знайти найкращу машину під ваші потреби!
+    </p>
+    <form id="booking-form">
+        <div class="car-select">
+            <div class="car-select-item">
+                <label for="car-type">Назва машини:</label>
+                <select name="car-type" id="car-select-input" class="car-type">
+                    <option value="Toyota Corolla">Toyota Corolla</option>
+                    <option value="BMW X5">BMW X5</option>
+                    <option value="Kia Soul">Kia Soul</option>
+                    <option value="Ford Focus">Ford Focus</option>
+                    <option value="BMW 3 f30">BMW 3 f30</option>
+                    <option value="BMW 5 g30">BMW 5 g30</option>
+                    <option value="Renaut Megan 2">Renaut Megan 2</option>
+                    <option value="Citroen Berlingo">Citroen Berlingo</option>
+                    <option value="Mercedes C class">Mercedes C class</option>
+                    <option value="Honda Civic">Honda Civic</option>
+                    <option value="Volvo XC60">Volvo XC60</option>
+                    <option value="Peugeot 5008">Peugeot 5008</option>
+                </select>
+            </div>
+            <div class="car-select-item">
+                <label for="date-start">Дата початку:</label>
+                <input type="date" id="date-start" name="date-start" class="car-select-input">
+            </div>
+            <div class="car-select-item">
+                <label for="date-end">Дата кінця:</label>
+                <input type="date" id="date-end" name="date-end" class="car-select-input">
+            </div>
+        </div>
+        <div class="contact-form">
+            <input type="text" name="name" class="input1" placeholder="Ім'я" required>
+            <input type="email" name="email" class="input2"  placeholder="Email" required>
+            <input type="phone" name="phone" class="input3"  placeholder="Телефон" required>
+            <button type="button" class="btn-2" onclick="return saveBooking()">OK</button>
+        </div>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Оренда автомобілів. Всі права захищені.</p>
+</footer>
+
+<script>
+
+</script>
+</body>
+</html>

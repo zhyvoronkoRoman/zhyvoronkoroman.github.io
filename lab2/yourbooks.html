@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css"/>
+    <script src = "scripts.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-refferrer"
+    />
+    <title>Оренда Автомобілів у Зимній Воді</title>
+</head>
+<body>
+    <!--Навігація-->
+    <nav>
+        <a href="index.html" class="brand">
+            <h1>Черемшина<b class = "accent"></b></h1>
+        </a>
+        <div class="menu">
+            <div class = "btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="collection.html">Машини </a>
+            <a href="index.html#about"> Про Нас</a>
+            <a href="yourbooks.html">Ваші бронювання </a>
+        </div>
+        <button class="btn-2" onclick="window.location.href='booking.html'">
+            Розпочати 
+        </button>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </nav>
+    <!--Навігація кінець-->
+
+    <section class="your-bookings">
+        <h1>Ваші бронювання</h1>
+        <div id="bookings-list">
+            <p id="no-bookings">Ще немає бронювань.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Оренда автомобілів. Всі права захищені.</p>
+    </footer>
+
+        
+</body>
+</html>
